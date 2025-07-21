@@ -58,38 +58,55 @@ server.port=8080
 
 In Eclipse:
 Right-click the project > Run As > Spring Boot App
-📮 API Endpoints
 
 ### 5.Tested via Postman:
+📮 API Endpoints
+🔹 1. Register a User
+Method: POST
 
-🔸 1. Register User
-POST /api/users/register
+URL: http://localhost:8080/api/users/register
+
+Body (JSON):
 {
   "username": "Ajini W",
   "password": "AjiniW@2005",
   "email": "ajiniw2005@gmail.com"
 }
+🔹 2. Login User
+Method: POST
 
-🔸 2. Login User
-POST /api/users/login
+URL: http://localhost:8080/api/users/login
+
+Body (JSON):
 {
   "username": "Ajini W",
   "password": "AjiniW@2005"
 }
+🔹 3. Get All Users
+Method: GET
 
-🔸 3. Get All Users
-GET /api/users
+URL: http://localhost:8080/api/users
 
-🔸 4. Update User
-PUT /api/users/{id}
+Body: Not required
+
+🔹 4. Update a User
+Method: PUT
+
+URL: http://localhost:8080/api/users/{id}
+
+Body (JSON):
 {
   "username": "Ajini",
   "password": "Ajini@2005",
   "email": "ajini2005@gmail.com"
 }
+🔹 5. Delete a User
+Method: DELETE
 
-🔸 5. Delete User
-DELETE /api/users/{id}
+URL: http://localhost:8080/api/users/{id}
+
+Body: Not required	
+
 
 ### 📂 Project Structure
 src
