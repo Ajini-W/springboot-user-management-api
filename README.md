@@ -30,7 +30,7 @@ A simple RESTful API built with Spring Boot, MySQL, and JPA to manage users with
 
 ## ⚙️ Setup Instructions
 
-1. Spring Boot Setup (via Spring Initializr)
+### 1. Spring Boot Setup (via Spring Initializr)
 
 - Go to [Spring Initializr](https://start.spring.io/)
 - Choose:
@@ -40,12 +40,12 @@ A simple RESTful API built with Spring Boot, MySQL, and JPA to manage users with
   - Dependencies: Spring Web, Spring Data JPA, MySQL Driver, Spring Boot DevTools
 - Generate the project and import it into **Eclipse IDE** as a Maven Project
 
-2. Create MySQL Database
+### 2. Create MySQL Database
 
 Run the following SQL command:
 CREATE DATABASE studentdb;
 
-3. Configure application.properties
+### 3. Configure application.properties
    
 spring.datasource.url=jdbc:mysql://localhost:3306/studentdb
 spring.datasource.username=your_mysql_username
@@ -54,12 +54,13 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 server.port=8080
 
-5. Run the Application
+### 4. Run the Application
 
 In Eclipse:
 Right-click the project > Run As > Spring Boot App
 📮 API Endpoints
-Tested via Postman:
+
+### 5.Tested via Postman:
 
 🔸 1. Register User
 POST /api/users/register
@@ -68,12 +69,14 @@ POST /api/users/register
   "password": "AjiniW@2005",
   "email": "ajiniw2005@gmail.com"
 }
+
 🔸 2. Login User
 POST /api/users/login
 {
   "username": "Ajini W",
   "password": "AjiniW@2005"
 }
+
 🔸 3. Get All Users
 GET /api/users
 
@@ -84,10 +87,11 @@ PUT /api/users/{id}
   "password": "Ajini@2005",
   "email": "ajini2005@gmail.com"
 }
+
 🔸 5. Delete User
 DELETE /api/users/{id}
 
-📂 Project Structure
+### 📂 Project Structure
 src
 ├── main
 │   ├── java
@@ -103,9 +107,13 @@ src
 │   └── resources
 │       └── application.properties
 
-💡 Future Improvements
+### 💡 Future Improvements
+
 Add JWT authentication
+
 Add frontend (React/Angular)
+
 Add pagination and sorting
+
 Deploy on Heroku/AWS
 
