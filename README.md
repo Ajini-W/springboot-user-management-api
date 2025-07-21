@@ -125,18 +125,31 @@ Body: Not required
 ### 📂 Project Structure
 
 src
+
 ├── main
+
 │   ├── java
+
 │   │   └── com.example.taskentity
+
 │   │       ├── controller
+
 │   │       │   └── TaskController.java
+
 │   │       ├── service
+
 │   │       │   └── TaskService.java
+
 │   │       ├── repository
+
 │   │       │   └── TaskRepository.java
+
 │   │       └── entity
+
 │   │           └── TaskEntity.java
+
 │   └── resources
+
 │       └── application.properties
 
 ### 💡 Future Improvements
