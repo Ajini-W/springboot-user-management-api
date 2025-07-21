@@ -42,26 +42,33 @@ A simple RESTful API built with Spring Boot, MySQL, and JPA to manage users with
 
 ### 2. Create MySQL Database
 
-Run the following SQL command:
+Open MySQL and run:
 CREATE DATABASE studentdb;
 
 ### 3. Configure application.properties
-   
-spring.datasource.url=jdbc:mysql://localhost:3306/studentdb
-spring.datasource.username=your_mysql_username
-spring.datasource.password=your_mysql_password
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-server.port=8080
+In src/main/resources/application.properties
 
-### 4. Run the Application
+### 4. Create Entity Class
+Create a file TaskEntity.java in com.example.taskentity.entity
 
-In Eclipse:
-Right-click the project > Run As > Spring Boot App
+### 5. Create Repository Interface
+Create a file TaskRepository.java in com.example.taskentity.repository
 
-### 5.Tested via Postman:
+### 6. Create Service Class
+Create a file TaskService.java in com.example.taskentity.service
+
+### 7. Create Controller Class
+Create a file TaskController.java in com.example.taskentity.controller
+
+### 8. Run Your Application
+Right-click project > Run As > Spring Boot App
+
+### 9.Tested via Postman:
+
 📮 API Endpoints
+
 🔹 1. Register a User
+
 Method: POST
 
 URL: http://localhost:8080/api/users/register
@@ -72,7 +79,9 @@ Body (JSON):
   "password": "AjiniW@2005",
   "email": "ajiniw2005@gmail.com"
 }
+
 🔹 2. Login User
+
 Method: POST
 
 URL: http://localhost:8080/api/users/login
@@ -82,7 +91,9 @@ Body (JSON):
   "username": "Ajini W",
   "password": "AjiniW@2005"
 }
+
 🔹 3. Get All Users
+
 Method: GET
 
 URL: http://localhost:8080/api/users
@@ -90,6 +101,7 @@ URL: http://localhost:8080/api/users
 Body: Not required
 
 🔹 4. Update a User
+
 Method: PUT
 
 URL: http://localhost:8080/api/users/{id}
@@ -100,7 +112,9 @@ Body (JSON):
   "password": "Ajini@2005",
   "email": "ajini2005@gmail.com"
 }
+
 🔹 5. Delete a User
+
 Method: DELETE
 
 URL: http://localhost:8080/api/users/{id}
@@ -109,6 +123,7 @@ Body: Not required
 
 
 ### 📂 Project Structure
+
 src
 ├── main
 │   ├── java
